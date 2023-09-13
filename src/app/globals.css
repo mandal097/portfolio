@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply px-12 py-2 mt-8 flex items-center justify-center gap-2 border-[1px] border-white rounded-full text-gray-200 text-lg font-light;
+}
+
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav_hover {
+  position: relative;
+}
+.nav_hover::after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  background-color: #f16522;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  opacity: 0;
+  transform-origin: center;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transform: scaleX(0);
+}
+
+.nav_hover:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.nav_hover-active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.animate_to_right {
+  animation: navAnimateRight 600ms ease-in 1;
+  opacity: 1;
+}
+
+@keyframes navAnimateRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate_to_left {
+  opacity: 1;
+  animation: navAnimateLeft 600ms ease-in 1;
+}
+
+@keyframes navAnimateLeft {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+  li {
+    @apply cursor-pointer;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+::-webkit-scrollbar-track {
+  background: var(--text);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-blue)
+}
+
+:root {
+  --text: #e0dede;
+  --text-light: #c2bebe;
+  --bg: #16181c;
+  --bg-light: #23252c;
+  --blue: #5651e5;
+  --bg-blue: #3f2caa;
+  --orange: #f16522;
+  --cyan:#01b5ac;
+}
