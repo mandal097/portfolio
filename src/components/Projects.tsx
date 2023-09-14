@@ -18,7 +18,11 @@ const ProjectCard = ({
 
   const handleShow = () => {
     setShow(!show);
-    document.body.style.overflowY = "hidden";
+    if (document.body.style.overflowY === "hidden") {
+      document.body.style.overflowY = "scroll";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
   };
 
   React.useEffect(() => {
@@ -49,8 +53,12 @@ const ProjectCard = ({
             <p className="text-white text-center text-sm">{details.subtitle}</p>
             <div className="flex items-center gap-1 flex-wrap mt-2">
               {details.technologies.map((item) => (
-                <div key={item} className="flex items-center py-[2px] px-2 rounded-full bg-white hover:scale-110 hover:bg-[var(--orange)] cursor-pointer transition-all duration-500">
-                  <span className="text-xs text-[var(--orange)] hover:text-white  font-medium transition-all duration-150">{item}</span>
+                <div
+                  key={item}
+                  className="flex items-center py-[2px] px-2 rounded-full bg-white hover:scale-110 hover:bg-[var(--orange)] cursor-pointer transition-all duration-500">
+                  <span className="text-xs text-[var(--orange)] hover:text-white  font-medium transition-all duration-150">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
