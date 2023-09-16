@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 const Logo = ({ display }: { display?: string }) => {
@@ -18,9 +17,9 @@ const Logo = ({ display }: { display?: string }) => {
       className={`${
         display === "nav" && "hidden md:block"
       } cursor-pointer z-50`}>
-      <Link href="#home" className="font-semibold text-white text-3xl">
+      <a href="#home" className="font-semibold text-white text-3xl">
         Amarnath <span className="text-general-color">Mandal</span>
-      </Link>
+      </a>
     </div>
   );
 };

@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import div from "next/link";
+// import div from "next/a";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import Logo from "./Logo";
-import Link from "next/link";
+// import a from "next/a";
 
 const Navbar = () => {
   const navRef: React.MutableRefObject<any> = React.useRef();
@@ -40,6 +40,34 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  // controlling scroll in production
+  React.useEffect(() => {
+    const links = document.querySelectorAll('a[href^="#"]');
+    console.log(links);
+
+    const handleClick = (e: any) => {
+      e.preventDefault();
+      const targetId = e.target.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    links.forEach((link) => {
+      link.addEventListener("click", handleClick);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleClick);
+      });
+    };
+  }, []);
+
   return (
     <div
       ref={navRef}
@@ -59,7 +87,7 @@ const Navbar = () => {
             className={`nav_hover text-gray-50 text-sm font-mediu  ${
               showNav && "animate_to_right"
             }`}>
-            <Link href='#projects'>projects</Link>
+            <a href="#projects">projects</a>
           </li>
           <li
             onClick={closeNav}
@@ -67,7 +95,7 @@ const Navbar = () => {
             className={`nav_hover text-gray-50 text-sm font-medium  ${
               showNav && "animate_to_left"
             }`}>
-            <Link href='#skills'>skills</Link>
+            <a href="#skills">skills</a>
           </li>
           <li
             onClick={closeNav}
@@ -75,7 +103,7 @@ const Navbar = () => {
             className={`nav_hover text-gray-50 text-sm font-mediu  ${
               showNav && "animate_to_right"
             }`}>
-            <Link href='#about'>about</Link>
+            <a href="#about">about</a>
           </li>
           <li
             onClick={closeNav}
@@ -83,7 +111,7 @@ const Navbar = () => {
             className={`nav_hover text-gray-50 text-sm font-mediu  ${
               showNav && "animate_to_left"
             }`}>
-            <Link href='#socials'>socials</Link>
+            <a href="#socials">socials</a>
           </li>
           <div
             onClick={handleShow}
