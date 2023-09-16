@@ -25,13 +25,13 @@ const About = ({ bg }: { bg: string }) => {
           Who I Am
         </p>
 
-        <p className="text-gray-50 text-[17px] font-normal leading-8">
+        <p className="text-gray-50 text-sm sm:text-[17px] font-normal leading-5 sm:leading-8">
           I am passionate Full-Stack Web Developer with a specialization in the
           MERN (MongoDB, Express.js, React.js, Node.js) stack. I&apos;m
           dedicated to crafting dynamic and feature-rich web applications that
           not only impress visually but also deliver a seamless user experience.
         </p>
-        <p className="text-gray-50 text-[17px] font-normal leading-8">
+        <p className="text-gray-50 text-sm sm:text-[17px] font-normal leading-5 sm:leading-8">
           I specialize in building mobile responsive front-end UI applications
           that connect with API’s and other backend technologies. I’m passionate
           about learning new technologies and understand there is more than one
@@ -59,7 +59,7 @@ const About = ({ bg }: { bg: string }) => {
           alt="image"
           width={800}
           height={800}
-          className="object-contain"
+          className="object-contain h-64 sm:h-96"
         />
       </div>
     </div>

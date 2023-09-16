@@ -86,7 +86,7 @@ export const projects = [
     id: 1,
     project_title: "WeeConnect",
     subtitle: "Social media application",
-    image: "wee-connect.png",
+    image: "wee-connect.webp",
     description:
       "Social media a clone a facebook build in MERN stack and firebase for storage and redux for state management. It has all functionality that a simple social media sites have, main are authentication, user profile, chatting , commenting and replying on posts, community group pages, marketplace and friends connectivity",
     technologies: [
@@ -106,7 +106,7 @@ export const projects = [
     id: 2,
     project_title: "Food Recipe App",
     subtitle: "Search recipes of any food in few seconds",
-    image: "food-recipe.png",
+    image: "food-recipe.webp",
     description:
       "Simple react application used to search wide range of food recipes in few seconds. This application is built in React and spoonacular Api (Food api). This app is build to show my use of apis and integration it with frontend and also little bit of redux",
     technologies: ["ReactJs", "Api", "Redux", "SCSS"],
@@ -117,7 +117,7 @@ export const projects = [
     id: 3,
     project_title: "Music App",
     subtitle: "Music application ",
-    image: "spotify.png",
+    image: "spotify.webp",
     description:
       "Music application made by only HTML,CSS and javaScript. This is a fully customized music app. The project showcase advanced JavaScript and CSS implementation.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -128,7 +128,7 @@ export const projects = [
     id: 4,
     project_title: "Cat Clicker",
     subtitle: "Add your cat pic here",
-    image: "cat-clicker.png",
+    image: "cat-clicker.webp",
     description:
       "Create cat clicker app built on MERN stack. The project is used to showcase APIs creation by implementation of CRUD operation in NodeJs and integrate it with ReactJs app and also redux implementation",
     technologies: [
@@ -147,7 +147,7 @@ export const projects = [
     id: 5,
     project_title: "Task Manager",
     subtitle: "Manage your tasks here easily",
-    image: "task-manager.png",
+    image: "task-manager.webp",
     description: "Task manager is site where you can manage your tasks. The app has allows to add task, mark check to completed tasks, delete tasks if you want and update existing tasks.",
      technologies: [
       "ReactJs",

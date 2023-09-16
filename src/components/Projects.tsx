@@ -35,7 +35,7 @@ const ProjectCard = ({
         data-aos="zoom-in"
         data-aos-duration="1000"
         data-aos-delay={`${delay}`}
-        className="relative flex items-center justify-center h-[50vh] w-full  rounded-xl group overflow-hidden">
+        className="relative flex items-center justify-center h-[30vh] md:h-[50vh] w-[80%]  md:w-full  rounded-xl group overflow-hidden cursor-pointer">
         <Image
           src={`/assets/projects/${details.image}`}
           alt="project image"
@@ -50,7 +50,7 @@ const ProjectCard = ({
             <h3 className="text-xl text-white font-semibold tracking-wider">
               {details.project_title}
             </h3>
-            <p className="text-white text-center text-sm">{details.subtitle}</p>
+            <p className="text-white text-start text-sm">{details.subtitle}</p>
             <div className="flex items-center gap-1 flex-wrap mt-2">
               {details.technologies.map((item) => (
                 <div
@@ -91,12 +91,12 @@ const Projects = ({ bg }: { bg: string }) => {
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-duration="1000"
-        className="w-full md:px-14 xl:w-[1240px] p-4 pb-32 sm:px-10 mt-20  grid grid-cols-1 md:grid-cols-2 gap-10">
+        className="w-full md:px-14 xl:w-[1240px] p-4 pb-32 sm:px-10 mt-20  grid grid-cols-1 place-items-center md:grid-cols-2 gap-10">
         {projects?.map((project, index) => (
           <ProjectCard
             key={project.id}
             details={project}
-            delay={(index + 1) * 200}
+            delay={(index + 1) * 50}
           />
         ))}
       </div>

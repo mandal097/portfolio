@@ -60,7 +60,7 @@ const ProjectDetail = ({
           {details.project_title}
         </h2>
         <p className="text-gray-100 text-base font-light">{details.subtitle}</p>
-        <div className="w-full h-[40vh] flex items-center justify-center mt-1">
+        <div className="h-[30vh] md:w-full md:h-[40vh] flex items-center justify-center mt-1">
           <img
             src={`/assets/projects/${details.image}`}
             alt="project image"
@@ -120,7 +120,7 @@ const ProjectDetail = ({
             </a>
           </div>
         )}
-        <div className="w-full h-10 bg-[var(--orange)] text-white rounded-xl flex items-center justify-center mt-4 cursor-pointer">
+        <div className="w-full h-10 bg-[var(--orange)] text-white rounded-xl flex items-center justify-center my-4 cursor-pointer">
           <a
             href={details.website_link}
             target="_blank"

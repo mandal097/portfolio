@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="flex items-center justify-center">
           <Logo />
         </div>
-        <p className="text-center  text-white opacity-20 text-sm mt-6">
+        <p className="text-center  text-white opacity-70 text-sm mt-6">
           Made with ❤ by Amarnath kumar mandal
         </p>
       </div>

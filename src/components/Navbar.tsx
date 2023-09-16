@@ -43,7 +43,6 @@ const Navbar = () => {
   // controlling scroll in production
   React.useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]');
-    console.log(links);
 
     const handleClick = (e: any) => {
       e.preventDefault();
@@ -51,7 +50,7 @@ const Navbar = () => {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 100,
+          top: targetElement.offsetTop,
           behavior: "smooth",
         });
       }

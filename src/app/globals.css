@@ -85,7 +85,7 @@ html {
     @apply font-bold;
   }
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-3xl sm:text-5xl md:text-6xl tracking-widest sm:translate-x-0;
   }
   h2 {
     @apply text-3xl sm:text-4xl;
