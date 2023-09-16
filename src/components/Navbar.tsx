@@ -46,7 +46,7 @@ const Navbar = () => {
 
     const handleClick = (e: any) => {
       e.preventDefault();
-      const targetId = e.target.getAttribute("href").substring(1);
+      const targetId = e.target.getAttribute("href")?.substring(1);
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
         window.scrollTo({

@@ -13,7 +13,7 @@ import GetInTouch from "@/components/GetInTouch";
 
 const Home = () => {
   const [bg, setBg] = React.useState("bg-[var(--bg)]");
-  // const [showLoader, setShowLoader] = React.useState(true);
+  const [showLoader, setShowLoader] = React.useState(true);
 
   React.useEffect(() => {
     AOS.init();
@@ -23,11 +23,11 @@ const Home = () => {
     document.body.style.overflowY = "scroll";
   }, []);
 
-  // React.useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowLoader(false);
-  //   }, 2000);
-  // }, []);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setShowLoader(false);
+    }, 2000);
+  }, []);
 
   React.useEffect(() => {
     const handler = () => {
@@ -61,7 +61,7 @@ const Home = () => {
     };
   }, []);
 
-  // if (showLoader) return <Loader />;
+  if (showLoader) return <Loader />;
   return (
     <>
       <div className={`overflow-hidden`}>

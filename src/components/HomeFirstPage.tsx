@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import Socials from "./Socials";
 import Aos from "aos";
 
 const HomeFirstPage = ({ bg }: { bg: string }) => {
-  const [isMobView, setIsMobView] = React.useState<boolean>(true);
+  const [isMobView, setIsMobView] = React.useState<boolean>();
 
   React.useEffect(() => {
     if (window.matchMedia("(max-width: 640px)").matches) {
@@ -19,7 +20,10 @@ const HomeFirstPage = ({ bg }: { bg: string }) => {
   return (
     <div
       id="home"
-      className={`w-screen m-auto h-[80vh] sm:h-screen flex sm:items-center sm:justify-center bg-[#16181c] ${bg} transition-all duration-200`}>
+      className={`w-screen m-auto h-[80vh] sm:h-screen flex sm:items-center sm:justify-center bg-[#16181c] ${bg} transition-all duration-200 relative bg-fixed`}>
+      <div className=" hidden group-hover:translate-y-0 transition-all p-24 duration-300 absolute top-0 w-screen h-full md:flex items-start justify-start bg-fixed">
+        <img src="/assets/homepage_image.png" alt="boy-with-laptop" className="object-contain h-[25vh] w-[25vh]"/>
+      </div>
       <div className="w-full h-auto text-center">
         <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center ">
           <div

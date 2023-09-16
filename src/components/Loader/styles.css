@@ -11,6 +11,7 @@
   letter-spacing: 0.1em;
   opacity: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   -ms-filter: none;
@@ -20,41 +21,46 @@
   -webkit-transition: opacity 1.2s, visibility 1.2s;
   transition: opacity 1.2s, visibility 1.2s;
 }
+
+.img{
+height: 20vh;
+margin-bottom: 30px;
+}
+
+.img img{
+  height: 100%;
+}
+
+
 .l-loader .text {
   display: flex;
   align-items: baseline;
   justify-content: center;
   width: fit-content;
   position: relative;
-  font-size: 40px;
+  font-size: 30px;
   color: #23252c;
-  font-weight: 500;
+  font-weight: 300;
 }
+
 
 .text::before {
   position: absolute;
   content: "";
-  width: 40px;
+  width: 30px;
   height: 45px;
-  background: linear-gradient(
-    to left,
-    #fff,
-    #ffffff59
-  );
+  background: linear-gradient(to left, #fff, #ffffff59);
   top: 7px;
-  left: -40px;
+  left: -30px;
   opacity: 0;
-  animation: translateOverlay 2000ms ease-in 1;
 }
 
-.text{
-  animation: fadeletter 3s ease-in 1;
+.text {
   animation-delay: 2s;
-
 }
 
 .letter {
-  animation: fadeletter 800ms ease-in 1;
+  font-weight: 300;
 }
 
 .letter:nth-child(1) {
@@ -103,35 +109,28 @@
 .letter-i {
   position: relative;
   font-size: 30px !important;
+  font-weight: bolder;
 }
+
+.letter-i::before{
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  background: #ededed;
+  width: 6px;
+  height: 6px;
+}
+
 .l-loader .letter-i .fake {
   position: absolute;
-  top: -1px;
+  top: 5px;
   left: 2px;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: #f16522;
   border-radius: 50%;
   animation: bounce 800ms ease-in infinite;
-}
-
-@keyframes fadeletter {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes translateOverlay {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(370px);
-    opacity: 1;
-  }
 }
 
 @keyframes bounce {
