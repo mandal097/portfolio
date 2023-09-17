@@ -115,14 +115,14 @@ export const projects = [
   },
   {
     id: 3,
-    project_title: "Music App",
-    subtitle: "Music application ",
-    image: "spotify.webp",
+    project_title: "To do Dashboard",
+    subtitle: "Static dashboard view",
+    image: "to-do-dashboard.webp",
     description:
-      "Music application made by only HTML,CSS and javaScript. This is a fully customized music app. The project showcase advanced JavaScript and CSS implementation.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    website_link: "https://mandal-spotify-clone.netlify.app",
-    github_link: "https://app.netlify.com/sites/mern-task-manager1/overview",
+      "Dashboard UI developed in Nextjs and Tailwind. This is static site to showcase my advanced Tailwind CSS implementation and responsiveness for different screens.",
+    technologies: ["Next.Js", "Tailwind CSS"],
+    website_link: "https://dashboard-ui-akm.netlify.app/",
+    github_link: "https://github.com/mandal097/dashboard-ui",
   },
   {
     id: 4,
@@ -148,18 +148,30 @@ export const projects = [
     project_title: "Task Manager",
     subtitle: "Manage your tasks here easily",
     image: "task-manager.webp",
-    description: "Task manager is site where you can manage your tasks. The app has allows to add task, mark check to completed tasks, delete tasks if you want and update existing tasks.",
-     technologies: [
+    description:
+      "Task manager is site where you can manage your tasks. The app has allows to add task, mark check to completed tasks, delete tasks if you want and update existing tasks.",
+    technologies: [
       "ReactJs",
       "MonogDb",
       "NodeJs",
       "ExpressJs",
       "SCSS",
       "Redux",
-      "User Authentication"
+      "User Authentication",
     ],
     website_link: "https://mern-task-manager1.netlify.app",
     github_link: "https://github.com/mandal097/react-task-manager-ui",
     backend_github_link: "https://github.com/mandal097/node-task-manager-api",
+  },
+  {
+    id: 6,
+    project_title: "Music App",
+    subtitle: "Music application ",
+    image: "spotify.webp",
+    description:
+      "Music application made by only HTML,CSS and javaScript. This is a fully customized music app. The project showcase advanced JavaScript and CSS implementation.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    website_link: "https://mandal-spotify-clone.netlify.app",
+    github_link: "https://app.netlify.com/sites/mern-task-manager1/overview",
   },
 ];
